@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Brendan's Recipes</title>
+	<meta name="description" content="Brendan's Top Secret Not A Secret Recipes.">
+	<meta name="keywords" content="food, love, recipe, pancakes, gym">
+	<meta name="author" content="Brendan">
+
+	<style>
+		body
+		{
+			/* Style choice because Baskerville is dope */
+			font-family: 'Baskerville', Arial, sans-serif;
+			color: #444;
+			background-color: rgb( 209, 232, 245 );
+		}
+	
+		nav
+		{
+			
+			background-color: rgb( 127, 153, 168 );
+			/* Padding so that text is not stacked directly on top of the bottom edge */
+			padding-bottom: 30px;
+			/* Margin so that the Sections do not stack */
+			margin-bottom: 10px;
+		}
+
+		figure
+		{
+			/* Padding so that the border and actual picture have some "space" */
+			padding: 10px;
+			/* Border for the whole figure (pic + caption) */
+			border-style: solid;
+			border-color: rgb( 246, 190, 149 );
+			border-width: 10px;
+		}
+
+		div
+		{
+			/* Style decision to have each section be a seperate color from the page background */
+			background-color: rgb( 127, 153, 168 );
+		}
+		
+		/* Descendent selecor used to contorl specifically the "main section" of the page */
+		main div
+		{
+			/* Static width so that it maintains its proportion to the figure */
+			width: 500;
+			float: right;
+			border-style: solid;
+			border-width: 250px;
+			border-color: rgb( 127, 153, 168 );
+			border-left: 10px;
+			border-right: 10px;
+			border-top: 5px;
+			border-bottom: 50px;
+			/* Space between other DIVs that may be under this section so that the colors do not overlap and each div/section has it own "box" */
+			margin-bottom: 10px;
+		}
+
+		article
+		{
+			/* Padding so that the text does not stack or touch the edges... some breathing room */
+			padding: 15px;
+		}
+
+		aside
+		{
+			/* Static width and height so that its proportions are clearly defined */
+			width: 100px;
+			height: 500px;
+			float: left;
+			background-color: rgb( 127, 153, 168 );
+			padding-right: 75px;
+		}
+		
+		footer
+		{
+			/* Clear so that the floats do not cause the page or specifically the footer to go out of whack and overlap everything */
+			clear: both;
+			margin-top: 10px;
+			background-color: rgb( 246, 190, 149 );
+		}
+
+		.footerlinks
+		{
+			/* Margins for extra space between last DIV ("main" section) */
+			margin-top: 10px;
+			padding-top: 5px;
+			/* Style choice to have the footer be a different color so that it is clearly defined */
+			border-style: solid;
+			border-width: 2px;
+			border-color: rgb( 246, 190, 149 );
+			background-color: rgb( 246, 190, 149 );
+			/* 100% width so that it is always filling the bottom of the page */
+			width: 100%;
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+	<div>
+		<h1>Recipes for Days</h1>
+		<nav>
+			<a href="#">About Us</a>
+			<a href="#">Contact Us</a>
+			<a href="#">Twitter</a>
+		</nav>
+	</div>
+	</header>
+
+	<aside>
+		<p><strong>Menu Bar</strong></p>
+			<nav>
+				<ul>
+					<li><a href="index.html">Banana Pancake</a></li>
+					<li><a href="../placeholderrecipez/index.html">Recipe 2</a></li>
+					<li><a href="../placeholderrecipez/index.html">Recipe 4</a></li>
+					<li><a href="../placeholderrecipez/index.html">Recipe 5</a></li>
+					<li><a href="../placeholderrecipez/index.html">Recipe 6</a></li>
+					<li><a href="../placeholderrecipez/index.html">Recipe 7</a></li>
+					<li><a href="../index.html">Home</a></li>
+				</ul>
+			</nav>
+	</aside>
+
+	<main>
+		<div>
+		<figure>
+        	<img src="../images/bpimage1.jpg"/ width="500" height="300px">
+        	<figcaption>
+            	<em>Completed Recipe</em>
+        	</figcaption>
+		</figure>
+
+		<article>
+			<h2>Banana Pancake</h2>
+				<p> <strong>Ingredients</strong> </p>
+					<ul>
+						<p>(9 Items)</p>
+						<li>1 cup all-purpose flour</li>
+						<li>1 tablespoon white sugar</li>
+						<li>2 teaspoons baking powder</li>
+						<li>1/4 teaspoon salt</li>
+						<li>1 egg, beaten</li>
+						<li>1 cup milk</li>
+						<li>2 tablespoons vegetable oial</li>
+						<li>2 ripe bananas, mashed</li>
+						<li>1/4 teaspoon vanilla extract</li>
+					</ul>
+			<h3>Prep and Cook</h3>
+				<p> <strong>Preparation</strong> </p>
+					<ol>
+						<p>(5 Minutes)</p>
+						<li>Combine flour, baking powder, and salt</li>
+						<li>Combine egg, milk, vegetable oil, and bananas in a second  bowl</li>
+						<li>Stir flour mixture into banana mixture until lumps decrease</li>
+					</ol>
+				<p> <strong>Cook</strong> </p>
+					<ol>
+						<p>(10 Minutes)</p>
+						<li>Heat oiled pan over medium high heat</li>
+						<li>Pour or scoop batter, 1/4 cup recommended size</li>
+						<li>Cook until both sides are golden brown</li>
+					</ol>
+				<p> <em>Optional: <br> Whip cream and sliced bananas on top of stacked pancakes</em> </p>
+		</article>
+		</div>
+	</main>
+	
+	<footer>
+		<nav class="footerlinks">
+			<a href="#">About Us</a>
+			<a href="#">Contact Us</a>
+			<a href="#">Twitter</a>
+			<a href="../index.html">Home</a>
+		</nav>
+	</footer>
+</body>
+
+</html>

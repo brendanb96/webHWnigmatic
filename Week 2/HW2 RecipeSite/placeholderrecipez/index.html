@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Brendan's Recipes</title>
+	<meta name="description" content="Brendan's Top Secret Not A Secret Recipes.">
+	<meta name="keywords" content="food, love, recipe, pancakes, gym">
+	<meta name="author" content="Brendan">
+
+	<style>
+		body
+		{
+			/* Style choice because Baskerville is dope */
+			font-family: 'Baskerville', Arial, sans-serif;
+			color: #444;
+			background-color: rgb( 209, 232, 245 );
+		}
+	
+		nav
+		{
+			
+			background-color: rgb( 127, 153, 168 );
+			/* Padding so that text is not stacked directly on top of the bottom edge */
+			padding-bottom: 30px;
+			/* Margin so that the Sections do not stack */
+			margin-bottom: 10px;
+		}
+
+		figure
+		{
+			/* Padding so that the border and actual picture have some "space" */
+			padding: 10px;
+			/* Border for the whole figure (pic + caption) */
+			border-style: solid;
+			border-color: rgb( 246, 190, 149 );
+			border-width: 10px;
+		}
+
+		div
+		{
+			/* Style decision to have each section be a seperate color from the page background */
+			background-color: rgb( 127, 153, 168 );
+		}
+		
+		/* Descendent selecor used to contorl specifically the "main section" of the page */
+		main div
+		{
+			/* Static width so that it maintains its proportion to the figure */
+			width: 500;
+			float: right;
+			border-style: solid;
+			border-width: 250px;
+			border-color: rgb( 127, 153, 168 );
+			border-left: 10px;
+			border-right: 10px;
+			border-top: 5px;
+			border-bottom: 50px;
+			/* Space between other DIVs that may be under this section so that the colors do not overlap and each div/section has it own "box" */
+			margin-bottom: 10px;
+		}
+
+		article
+		{
+			/* Padding so that the text does not stack or touch the edges... some breathing room */
+			padding: 15px;
+		}
+
+		aside
+		{
+			/* Static width and height so that its proportions are clearly defined */
+			width: 100px;
+			height: 500px;
+			float: left;
+			background-color: rgb( 127, 153, 168 );
+			padding-right: 75px;
+		}
+		
+		footer
+		{
+			/* Clear so that the floats do not cause the page or specifically the footer to go out of whack and overlap everything */
+			clear: both;
+			margin-top: 10px;
+			background-color: rgb( 246, 190, 149 );
+		}
+
+		.footerlinks
+		{
+			/* Margins for extra space between last DIV ("main" section) */
+			margin-top: 10px;
+			padding-top: 5px;
+			/* Style choice to have the footer be a different color so that it is clearly defined */
+			border-style: solid;
+			border-width: 2px;
+			border-color: rgb( 246, 190, 149 );
+			background-color: rgb( 246, 190, 149 );
+			/* 100% width so that it is always filling the bottom of the page */
+			width: 100%;
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+	<div>
+		<h1>Recipes for Days</h1>
+		<nav>
+			<a href="#">About Us</a>
+			<a href="#">Contact Us</a>
+			<a href="#">Twitter</a>
+		</nav>
+	</div>
+	</header>
+
+	<aside>
+		<p><strong>Menu Bar</strong></p>
+			<nav>
+				<ul>
+					<li><a href="../bananapancakez/index.html">Banana Pancake</a></li>
+					<li><a href="index.html">Recipe 2</a></li>
+					<li><a href="index.html">Recipe 4</a></li>
+					<li><a href="index.html">Recipe 5</a></li>
+					<li><a href="index.html">Recipe 6</a></li>
+					<li><a href="index.html">Recipe 7</a></li>
+					<li><a href="../index.html">Home</a></li>
+				</ul>
+			</nav>
+	</aside>
+
+	<main>
+		<div>
+		<figure>
+        	<img src="../images/placeholderimage1.jpg"/ width="500" height="300px">
+        	<figcaption>
+            	<em>Just needed a placeholder lol</em>
+        	</figcaption>
+		</figure>
+
+		<article>
+			<h2>Sweet Potato Pie is Good</h2>
+				<p> <strong>Contents</strong> </p>
+					<ul>
+						<li>Sweet potatoes</li>
+						<li>Lots of Sugar</li>
+						<li>More Sugar</li>
+					</ul>
+			<h3>Snickerdoodles are cool too I guess</h3>
+				<p> <strong>And Carvel Ice Cream Cake</strong> </p>
+					<ol>
+						<li>One</li>
+						<li>Two</li>
+						<li>Three</li>
+					</ol>
+				<p> <strong>Or Any Cake For That Matter</strong> </p>
+					<ol>
+						<li>One</li>
+						<li>Two</li>
+						<li>Three</li>
+					</ol>
+		</article>
+		</div>
+	</main>
+	
+	<footer>
+		<nav class="footerlinks">
+			<a href="#">About Us</a>
+			<a href="#">Contact Us</a>
+			<a href="#">Twitter</a>
+			<a href="../index.html">Home</a>
+		</nav>
+	</footer>
+</body>
+
+</html>
