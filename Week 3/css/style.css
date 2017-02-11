@@ -1,0 +1,141 @@
+body
+{
+	/* Style choice because Baskerville is dope */
+	font-family: 'Baskerville', Arial, sans-serif;
+	color: #444;
+	background-color: rgb( 209, 232, 245 );
+}
+
+nav
+{
+	
+	background-color: rgb( 127, 153, 168 );
+	/* Padding so that text is not stacked directly on top of the bottom edge */
+	padding: 10px;
+	padding-bottom: 30px;
+	/* Margin so that the Sections do not stack */
+	margin-bottom: 10px;
+}
+
+figure
+{
+	/* Padding so that the border and actual picture have some "space" */
+	padding: 10px;
+	/* Border for the whole figure (pic + caption) */
+	border-style: solid;
+	border-color: rgb( 246, 190, 149 );
+	border-width: 10px;
+	-webkit-box-shadow: 0px 0px 15px 10px rgba( 68, 68, 68, 0.5 );
+	-moz-box-shadow: 0px 0px 15px 10px rgba( 68, 68, 68, 0.5 );
+	box-shadow: 0px 0px 12px 10px rgba( 68, 68, 68, 0.5 );
+}
+
+div
+{
+	/* Style decision to have each section be a seperate color from the page background */
+	background-color: rgb( 127, 153, 168 );
+}
+
+/* Descendent selecor used to contorl specifically the "main section" of the page */
+main div
+{
+	/* Static width so that it maintains its proportion to the figure */
+	width: 500;
+	display: inline-block;
+	margin-left: 100px;
+	border-style: solid;
+	border-radius: 1px;
+	border-color: #444;
+	/* Space between other DIVs that may be under this section so that the colors do not overlap and each div/section has it own "box" */
+	margin-bottom: 10px;
+}
+
+article
+{
+	/* Padding so that the text does not stack or touch the edges... some breathing room */
+	padding: 15px;
+}
+
+aside
+{
+	/* Static width and height so that its proportions are clearly defined */
+	width: 100px;
+	height: 500px;
+	padding: 10px;
+	float: left;
+	background-color: rgb( 127, 153, 168 );
+	padding-right: 120px;
+	border-style: solid;
+	border-radius: 1px;
+	border-color: #444;
+}
+
+footer
+{
+	/* Clear so that the floats do not cause the page or specifically the footer to go out of whack and overlap everything */
+	clear: both;
+	margin-top: 10px;
+	background-color: rgb( 246, 190, 149 );
+	border-style: solid;
+	border-radius: 1px;
+	border-color: #444;
+}
+
+.footerlinks
+{
+	/* Margins for extra space between last DIV ("main" section) */
+	margin-top: 10px;
+	padding-top: 25px;
+	/* Style choice to have the footer be a different color so that it is clearly defined */
+	border-style: solid;
+	border-width: 2px;
+	border-color: rgb( 246, 190, 149 );
+	background-color: rgb( 246, 190, 149 );
+	/* 100% width so that it is always filling the bottom of the page */
+	width: 100%;
+}
+
+a
+{
+	color: #444;
+	text-decoration: none;
+	padding: 2px;
+	/*margin: 10px;*/
+}
+
+a:hover
+{
+	background-color: rgb( 246, 190, 149 );
+}
+
+li
+{
+	margin-bottom: 10px;
+	width: 150px;
+	text-align: left;
+}
+
+ul
+{
+	list-style-type: none;
+}
+
+h1
+{
+	padding-left: 15px;
+	padding-top: 10px;
+}
+
+header div
+{
+	border-style: solid;
+	border-radius: 1px;
+	border-color: #444;
+	margin-bottom: 25px;
+}
+
+/*img
+{
+	box-shadow: 5px 5px 5px 5px rgba( 50, 50, 50, 0.5 );
+}*/
+
