@@ -1,0 +1,428 @@
+
+Responsive 996px grid system ~ Style CSS.
+Copyright 2013, Josh Cope
+*/
+
+/* =============================================================================
+   Site Styles
+   ========================================================================== */
+
+body
+{
+	background-image: url('../img/bgimage1.png');
+	background-size: 100% 100%;
+}
+
+header
+{
+	margin-top: 50px;
+}
+
+.titleLetter
+{
+	height: 50px;
+	width: auto;
+}
+
+main, aside
+{
+	/* Center All Inner/Child Inline Elements */
+	text-align: center;
+}
+
+h1
+{
+	/* [Add Drop Shadow Later] */
+	margin: 2px;
+	font-family: 'Raleway', Arial, sans-serif;
+	font-size: 50px;
+	color: #444;
+	font-weight: 1;
+}
+
+
+hr
+{
+	width: 472px;
+	/*height: 5px;*/
+	/* Allow HR to remain a block element, but stay centered */
+	margin-bottom: 1px;
+	margin-top: 1px;
+}
+
+.mediaPlayer
+{
+	/* Approx. 16:9 ratio*/
+	width: 472px;
+	height: 266px;
+	/*width: 507px;
+	height: 285px;*/
+	background-color: black;
+	margin: 0 auto;
+	/*display: inline-block;*/
+}
+
+.mediaItem
+{
+	width: 57px;
+	height: auto;
+}
+
+/*iframe:active
+{
+	width: 472px;
+	height: 266px;
+}*/
+
+aside
+{
+	position: relative;
+	/* Margin-Bottom from outside of 25px (x2 = 50px), mediaPlayer Width of 266px, 
+	Margin-Bottom of 2px from other elements */
+	/* 50 + 266 + 2 = 318 */
+	bottom: 320px;
+	z-index: -1;
+}
+
+aside div p
+{
+	display: none;
+	visibility: hidden;
+	font-size: 0em;
+	/*background-color: #616E7F;*/
+}
+
+/*.leftStyleBar, .rightStyleBar, .bottomStyleBar
+{
+	display: inline-block;
+	position: relative;
+}*/
+
+.colorBox
+{
+	/* 5 Color Box "spaces" alongside Media Player
+	MATH: Media Player Height (300px) / 5 = 60px */
+	/*width: 57px;
+	height: 57px;*/
+	width: 53.2px;
+	height: 53.2px;
+	/* Would be on bottom left corner after "Moonlit Halos"
+	so Bring it to the middle, next to "Media Player" */
+	position: relative;
+	/* Since divs are block elements, the desired "stacking effect"
+	will remain the divs SHOULD already be stacked on top of another,
+	but the relative position changes the overall offset */
+	/* MATH: Media Play Height (300px) + h1 size (50px) = 350 + 25px */
+	/*display: inline-block;*/
+	/* The "left" position is controlled in inline styling in
+	the HTML to refrain from using multiple IDs and classes*/
+}
+
+/*.rightStyleBar
+{
+	width: 60px;
+	height: 300px;
+	background-color: #616E7F;
+	bottom: 370px;
+	left: 653px;
+}*/
+
+.bottomStyleBar
+{
+	/* Width of Media Player (533px) + 120 (size of 2 color blocks.. 60px on each side */
+	/* 533 + 120 = 653px */
+	/*width: 653px;
+	height: 60px;
+	background-color: #616E7F;*/
+	/* top meets edge when "bottom: 310px" so add 60px */
+	/*bottom: 250px;
+	right: 64px;
+	text-align: center;*/
+}
+
+/*.bottomStyleBar p
+{	
+	display: inline;
+	visibility: visible;
+	color: #000;
+	font-size: 40px;
+	position: relative;
+	top: 5px;
+}*/
+
+p span
+{
+	margin-bottom: 12px;
+	font-family: 'Raleway', Arial, sans-serif;
+	font-size: 18px;
+	color: rgba( 55, 55, 55, 0 );
+	text-align: left;
+}
+
+div:hover > p span
+{
+	color: rgba( 55, 55, 55, .1 );
+}
+
+/* TRANSFORMS */
+
+header div img
+{
+	transform: scale(.8);
+	transition: 2s;
+}
+
+header div img:hover
+{
+	transform: scale(1.2);
+}
+
+.filterBox p
+{
+	transform: scale(1);
+	transition: 2s;
+}
+
+.filterBox:hover > p
+{
+	transform: scale(2);
+}
+
+.grid_1,
+.grid_2,
+.grid_3,
+.grid_4,
+.grid_5,
+.grid_6,
+.grid_7,
+.grid_8,
+.grid_9,
+.grid_10,
+.grid_11,
+.grid_12
+{
+	text-align: center;
+}
+
+/* =============================================================================
+   Page Styles
+   ========================================================================== */
+/*NON-HOME Pages*/
+
+a
+{
+	text-decoration: none;
+}
+
+a:hover
+{
+	color: black;
+	text-decoration: line-through;
+}
+
+.filterBox
+{
+	position: relative;
+	text-align: center;
+}
+
+.filterBox p
+{	
+	display: inline;
+	visibility: visible;
+	background-color: rgba( 0, 0, 0, 0 );
+	color: #000;
+	font-size: 13.3px;
+	font-weight: 2;
+	position: relative;
+	left: 53.2px;
+	top: 13.3px;
+}
+
+footer
+{
+	text-align: center;
+}
+
+footer div
+{
+	height: 53.2px;
+	position: relative;
+	bottom: 97px;
+}
+
+footer div p
+{
+	position: relative;
+	/* 53.2 / 2 */
+	font-size: 26.6px;
+	/* 53.3 / 5 */
+	top: 10.64px;
+}
+
+.footerLinks
+{
+	width: 416px;
+	position: relative;
+	bottom: 373px;
+	/* Allow Div to be positioned by "Footer" parent's text-align */
+	display: inline-block;
+	text-align: center;
+}
+
+.footerLinks nav
+{
+	/* Allow Div to be positioned by "footerLinks" parent's text-align */
+	display: inline-block;
+	margin: 24px;
+}
+
+.footerLinks nav p
+{
+	font-size: 16px;
+}
+
+/* =============================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 996px)
+{
+	.footerLinks
+	{
+		display: none;
+		width: 0em;
+		height: 0em;
+		visibility: hidden;
+	}
+}
+
+/* Tablet Portrait size to Base 996px */
+@media only screen and (min-width: 768px) and (max-width: 995px)
+{
+	/*header, h1
+	{
+		position: relative;
+		left: 57px;
+	}*/
+	main
+	{
+		position: relative;
+		right: 57px;
+	}
+	
+	aside
+	{
+		position: relative;
+		right: 83px;
+	}
+
+
+	h1
+	{
+		position: relative;
+		left: 57px;
+	}
+	
+	.rightBox, #clrRow2Col2, #clrRow5Col2
+	{
+		position: relative;
+		left: 140px;
+	}
+
+	.footerLinks
+	{
+		display: none;
+		width: 0em;
+		height: 0em;
+		visibility: hidden;
+	}
+
+	/*aside
+	{
+		position: relative;
+		left: 57px;
+	}*/
+
+	/*.rightBox
+	{
+		position: relative;
+		left: 57px;
+	}
+	.leftBox
+	{
+		position: relative;
+		right: 88px;
+	}
+*/
+	/*main
+	{
+		margin: 0 auto;
+	}*/
+	/*.rightBox
+	{
+		position: relative;
+		 83px + 26px = 109px
+		left: 109px;
+	}
+	.leftBox
+	{
+		position: relative;
+		 83px + 26px = 109px
+		right: 88px;
+	}*/
+}
+
+/* All Mobile Sizes */
+@media only screen and (max-width: 767px) 
+{
+	/* 996 - 752 = 244 */
+	/* 970 - 768 = 202 */
+	.rightBox
+	{
+		display: none;
+		height: 0em;
+		width: 0em;
+		visibility: hidden;
+	}
+}
+
+/* Mobile Landscape Size to Tablet Portrait */
+@media only screen and (min-width: 480px) and (max-width: 767px) 
+{
+	.colorBox
+	{
+		display: none;
+		height: 0em;
+		width: 0em;
+		visibility: hidden;
+	}
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size */
+@media only screen and (max-width: 479px)
+{
+	.colorBox
+	{
+		display: none;
+		height: 0em;
+		width: 0em;
+		visibility: hidden;
+	}
+}
+
+
+/* =============================================================================
+   Font-Face
+   ========================================================================== */
+/* This is the proper syntax for an @font-face file
+
+/* @font-face {
+font-family: 'FontName';
+src: url('../fonts/FontName.eot');
+src: url('../fonts/FontName.eot?iefix') format('embedded-opentype'),
+url('../fonts/FontName.woff') format('woff'),
+url('../fonts/FontName.ttf') format('truetype'),
+url('../fonts/FontName.svg#FontName') format('svg');
+font-weight: normal;
+font-style: normal; }

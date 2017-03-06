@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+*
+{
+	margin: 0;
+	padding: 0;
+}
+
+body
+{
+	background-image: url('../img/bgimage1.png');
+}
+
+header
+{
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+h1
+{
+	/* [Add Drop Shadow Later] */
+	margin: 2px;
+	font-family: 'Raleway', Arial, sans-serif;
+	font-size: 50px;
+	color: #444;
+	font-weight: 1;
+}
+
+.titleLetter
+{
+	width: 50px;
+	height: 50px;
+	display: inline-block;
+	padding: 60px;
+}
+
+.titleLetter img
+{
+	width: 90%;
+	height: 90%;
+	/*margin-bottom: 20px;*/
+}
+
+/*main
+{
+	float: center;
+}*/
+
+main, aside
+{
+	/* Center All Inner Elements */
+	text-align: center;
+}
+
+hr
+{
+	width: 533px;
+	/*height: 5px;*/
+	/* Allow HR to remain a block element, but stay centered */
+	margin: 0 auto;
+	margin-bottom: 4px;
+	margin-top: 4px;
+}
+
+
+.mediaPlayer
+{
+	/* Approx. 16:9 ratio*/
+	width: 533px;
+	height: 300px;
+	background-color: black;
+	position: relative;
+	/* Allow Positioning From Parent Element */
+	display: inline-block;
+}
+
+aside
+{
+	text-align: center;
+}
+
+aside div p
+{
+	display: none;
+	visibility: hidden;
+	font-size: 0em;
+	/*background-color: #616E7F;*/
+}
+
+.leftStyleBar, .rightStyleBar, .bottomStyleBar
+{
+	display: inline-block;
+	position: relative;
+}
+
+.leftStyleBar
+{
+	display: inline-block;
+	position: relative;
+	/* Media Plater Width (533)/2 = 266.5 ..... 266.5 + 30 (align right edges) + 30 (give some space) */
+	/*right: 326.5px;*/
+	bottom: 472px;
+}
+
+a
+{
+	text-decoration: none;
+}
+
+a:hover
+{
+	color: black;
+	text-decoration: line-through;
+}
+
+.colorBox
+{
+	/* 5 Color Box "spaces" alongside Media Player
+	MATH: Media Player Height (300px) / 5 = 60px */
+	width: 60px;
+	height: 60px;
+	/* Would be on bottom left corner after "Moonlit Halos"
+	so Bring it to the middle, next to "Media Player" */
+	position: relative;
+	/* Since divs are block elements, the desired "stacking effect"
+	will remain the divs SHOULD already be stacked on top of another,
+	but the relative position changes the overall offset */
+	/* MATH: Media Play Height (300px) + h1 size (50px) = 350 + 25px */
+	/*display: inline-block;*/
+	/* The "left" position is controlled in inline styling in
+	the HTML to refrain from using multiple IDs and classes*/
+}
+
+.filterBox
+{
+	position: relative;
+	text-align: center;
+}
+
+.filterBox p
+{	
+	display: inline;
+	visibility: visible;
+	background-color: rgba( 0, 0, 0, 0 );
+	color: #000;
+	font-size: 20px;
+	font-weight: 2;
+	position: relative;
+	left: 60px;
+	top: 20px;
+}
+
+.rightStyleBar
+{
+	width: 60px;
+	height: 300px;
+	background-color: #616E7F;
+	bottom: 370px;
+	left: 653px;
+}
+
+.bottomStyleBar
+{
+	/* Width of Media Player (533px) + 120 (size of 2 color blocks.. 60px on each side */
+	/* 533 + 120 = 653px */
+	width: 653px;
+	height: 60px;
+	background-color: #616E7F;
+	/* top meets edge when "bottom: 310px" so add 60px */
+	bottom: 250px;
+	right: 64px;
+	text-align: center;
+}
+
+.bottomStyleBar p
+{	
+	display: inline;
+	visibility: visible;
+	color: #000;
+	font-size: 40px;
+	position: relative;
+	top: 5px;
+}
+
+p span
+{
+	margin-bottom: 12px;
+	font-family: 'Raleway', Arial, sans-serif;
+	font-size: 18px;
+	color: rgba( 55, 55, 55, 0 );
+	text-align: left;
+}
+
+div:hover > p span
+{
+	color: rgba( 55, 55, 55, .1 );
+}
+
+/* TRANSFORMS */
+
+header div img
+{
+	transform: scale(1);
+	transition: 2s;
+}
+
+header div img:hover
+{
+	transform: scale(1.5);
+}
+
+.filterBox p
+{
+	transform: scale(1);
+	transition: 2s;
+}
+
+.filterBox:hover > p
+{
+	transform: scale(2);
+}
+
+
+
+
+
