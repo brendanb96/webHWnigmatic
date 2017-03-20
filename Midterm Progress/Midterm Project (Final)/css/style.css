@@ -1,0 +1,505 @@
+/*
+Responsive 996px grid system ~ Style CSS.
+Copyright 2013, Josh Cope
+*/
+
+/* IMPORTS */
+
+/* Raleway Font from Google Fonts... "sans-serif" Type */
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+/* =============================================================================
+   Site Styles
+   ========================================================================== */
+
+/* USE BACKGROUND "TEXTURE" IMAGE */
+body
+{
+	/* Taken from "img" Folder */
+	background-image: url('../img/bgimage1.png');
+}
+
+/* Leave Some Space Between Top of Page and Main Navbar */
+/* Less "Clustered" */
+header
+{
+	/* "Breathing Room" */
+	margin-top: 50px;
+}
+
+/* TITLELETTER: IMG Link... Sized by Height, and Width is Auto to Maintain Aspect Ratio of Image  */
+/* Link to Pages: videos, music, etc. Images are just the First Letters: V, M, etc. */
+.titleLetter
+{
+	/* 50px Height */
+	height: 50px;
+	/* Auto Width */
+	width: auto;
+}
+
+/* HEADER DIV P SPAN... The Text Displayed Above "img" Links */
+/* ...in MAIN NAVBAR on Top of Page... Notes What The IMG Link Is */
+/* ...videos, writing... etc. as images are just the First Letters: V, W, etc. */
+/* ..."hidden" */
+header div p span
+{
+	/* Give Space Between IMG Link */
+	margin-bottom: 12px;
+
+	/* Raleway */
+	/* Raleway, and Backups, "Arial" and "sans-serif" are all sans-serif Types */
+	font-family: 'Raleway', Arial, sans-serif;
+
+	/* 18px Font Size... Just Seems Like a Nice Size... */
+	font-size: 18px;
+
+	/* NOTE: Because the span ultimately exists in the Actual IMG Link Div... */
+	/* ... Setting the Display to None and Inline Later, makes the IMG Link have to */
+	/* ... "Accommodate" the display of the span and thus will essentially be displaced */
+	/* ... Instead... Visiblity and Opacity Attributes will be Used instead... as */
+	/* ... The IMG Link DIV will have to maintain its position because it has to */
+	/* ... "Accommodate" the span regardless if it is seen or not. */
+	/* Make span NOT Visible */
+	visibility: none;
+	/* Make span transparent... this is just being overly cautious */
+	color: rgba( 55, 55, 55, 0 );
+
+	/* Align the text to the left */
+	text-align: left;
+}
+
+/* HEADER DIV (Hover)... When the IMG Link DIV (bigger target area) is hovered over */
+/* ... the p span WITHIN it (the Text Displayed Above) will APPEAR */
+/* NOTE: The Opacity is still LOW at 10%... Subtle Styling Choice */
+header div:hover > p span
+{
+	/* Make span Visible */
+	visibility: visible;
+	/* Overwrite Previous 0% Opacity */
+	color: rgba( 55, 55, 55, .1 );
+}
+
+/* Main... Consists of Media Player and "Side Styling Boxes" (Left+Right) */
+main
+{
+	/* Center All Inner/Child Inline Elements */
+	text-align: center;
+}
+
+/* H1, Title of "Page" (Videos, Music, etc.) */
+/* Allow "Breathing Room" With Slight Margin */
+/* NOTE: Containers do not necessarily "touch" or overlap... */
+/* ...but the extra margin makes everything less "condensed" */
+h1
+{
+	/* "Breathing Room" */
+	margin: 2px;
+
+	/* Raleway */
+	/* Raleway, and Backups, "Arial" and "sans-serif" are all sans-serif Types */
+	font-family: 'Raleway', Arial, sans-serif;
+
+	/* Match "Size" of IMG Links in Navbar */
+	font-size: 50px;
+
+	/* Black-Heavy Grey */
+	color: #444;
+
+	/* Maintain A Skinny Font Stroke */
+	font-weight: 1;
+}
+
+/* HR... "Frames" the Media Player */
+/* Styled to A Certain Width but Maintains Block Display */
+hr
+{
+	/* 996-Grid Width of 6-Grids */
+	width: 472px;
+	/* Prevents "Stacking" of Horizontal Rule */
+	margin-bottom: 1px;
+	margin-top: 1px;
+}
+
+/* MEDIAPLAYER... Consists of ANY and ALL Main Media Items Displayed on Page */
+/* ...Pictures, Videos, etc. iframes and embed code will exist in this "box" or "player" */
+/* Approx. 16:9 ratio*/
+.mediaPlayer
+{
+	/* 996-Grid Width of 6-Grids */
+	width: 472px;
+	/* 266px Calculated from 16:9 ratio of 472px Width */
+	height: 266px;
+	/* Leave Background Black for Styling Purposes */
+	background-color: black;
+}
+
+/* COLORBOX... The "Styling" Boxes Displayed Throughout Site and Its Pages */
+/* ...can be overwritten to expand its height or width to serve as "bars" with INLINE styling */
+/* ...Three Colors: Dark Blue, Grey, and Light Blue... Colors are specified INLINE */
+.colorBox
+{
+	/* The Color Box "spaces" alongside Media Player
+	MATH: Media Player Height (266px) / 5 = 53.2px */
+	/* 5 is used so that a length of 5 boxes can exist alongside the MediaPlayer */
+	width: 53.2px;
+	height: 53.2px;
+
+	/* Position is Relative to Allow INLINE Styling to be Able to "OffSet" its Position */
+	/* Depending on a specific Pages needs... e.g. the Home Page Styling Color Boxes are */
+	/* ... different from Video Page, Music Page, etc. */
+	position: relative;
+}
+
+/* ---------- */
+/* TRANSFORMS */
+/* ---------- */
+
+/* TITLELETTER: IMG LINK... Pre-Transform */
+/* A Scaling Transformation */
+.titleLetter
+{
+	transform: scale(.8);
+	transition: 2s;
+}
+
+/* TITLELETTER (HOVER): IMG LINK... Transformation */
+/* A Scaling Transformation on Hover */
+.titleLetter:hover
+{
+	transform: scale(1.2);
+}
+
+/* GRIDS... Make Sure Everything that is Inline or Inline-Block is Aligned in the Center */
+.grid_1,
+.grid_2,
+.grid_3,
+.grid_4,
+.grid_5,
+.grid_6,
+.grid_7,
+.grid_8,
+.grid_9,
+.grid_10,
+.grid_11,
+.grid_12
+{
+	text-align: center;
+}
+
+/* =============================================================================
+   Page Styles
+   ========================================================================== */
+
+/* --------- */
+/* HOME PAGE */
+/* --------- */
+
+/* HOMESTYLE RIGHTBOX... RightBoxes on Other Pages are SIDEBARS */
+/* ...In the HOMEPAGE, the Right Color Boxes are Styled Similar to the Left Color Boxes */
+.homeStyle .rightBox
+{
+	height: 53.2px;
+	/* set value now so that it is not added with other pages "rightBox" styles */
+	bottom: 0px;
+}
+
+/* ------------------ */
+/* ALL NON-HOME Pages */
+/* ------------------ */
+
+/* A... Remove Default Anchor Styling */
+a
+{
+	/* No Underline */
+	text-decoration: none;
+}
+
+/* A (Hover)... Give a Hovering Style */
+a:hover
+{
+	color: black;
+	/* StrikeThrough */
+	text-decoration: line-through;
+}
+
+/* FILTERBOX... Applied to Color Boxes... Responsible for Color Boxes*/
+/* ... that have navigation properties. "DARK", "GREY", "LIGHT" links */
+.filterBox
+{
+	/* Used so that it can be repositioned INLINE *if needed* */
+	position: relative;
+	/* Center All Text */
+	text-align: center;
+}
+
+/* FILTERBOX P... This is within an anchor tag... Links to subpages... "DARK", "LIGHT" etc. */
+/* ALSO: Used as Navigation for which media file to choose...what video, picture, etc. */
+.filterBox p
+{	
+	display: inline;
+	visibility: visible;
+	background-color: rgba( 0, 0, 0, 0 );
+	color: #000;
+	font-size: 13.3px;
+	font-weight: 2;
+	position: relative;
+	left: 53.2px;
+	top: 13.3px;
+}
+
+/* NON-HOMESTYLE RIGHTBOX... RightBoxes on These Pages are SIDEBARS */
+/* ...the Right Color Boxes are NAVBARS for the Divs that choose between media files... what video, etc.  */
+.rightBox
+{
+	/* 266px is the height of the Media Player... Selected so it Matches */
+	height: 266px;
+	/* Align it so that it slightly goes down */
+	bottom: 15px;
+}
+
+/* NON-HOMESTYLE RIGHTBOX UL... RightBoxes on These Pages are SIDEBARS */
+/* ...this is the unordered list of all the media items on the current page  */
+.rightBox ul
+{
+	/* NO BULLETS */
+	list-style-type: none;
+	/* Re-Position it from Current/"Proper" Location */
+	position: relative;
+	right: 85px;
+}
+
+/* NON-HOMESTYLE RIGHTBOX UL LI... Space out each item */
+.rightBox ul li
+{
+	margin-bottom: 25px;
+}
+
+/* OPTIONTITLES... Titles of Specific Media Items... MAX of 3 CHOICES per Page */
+#optionTitle1, #optionTitle2, #optionTitle3
+{
+	font-style: italic; 
+	color: #FFFFFF;
+}
+
+/* FOOTER... Contains BOTTOM COLOR BOX STYLING + Footer Links */
+footer
+{
+	/* Align All Inline and Inline-Block Elements */
+	text-align: center;
+}
+
+/* FOOTER DIV... ALL FOOTER DIVs */
+footer div
+{
+	height: 53.2px;
+	/* Allow Repositioning */
+	position: relative;
+	color: #FFF;
+}
+
+/* FOOTERTITLE... The Div in Which CONTAINS Title of Subpage... "DARK", "LIGHT", "GREY" */
+.footerTitle
+{
+	/* Reposition */
+	bottom: 26.5px;
+	/* SAME as headers margin-top... "50px" */
+	margin-bottom: 50px;
+}
+
+/* FOOTER DIV P... ACTUAL Title of Subpage... "DARK", "LIGHT", "GREY" */
+footer div p
+{
+	position: relative;
+	/* MATH: 53.2 / 2 */
+	font-size: 26.6px;
+	/* MATH: 53.3 / 5 */
+	top: 10.64px;
+}
+
+/* FOOTERLINKS... DIV of Links to Other Pages that "Appear" when Screen is "Small" */
+.footerLinks
+{
+	width: 416px;
+	position: relative;
+	bottom: 166px;
+	/* Allow Div to be positioned by "Footer" parent's text-align */
+	display: inline-block;
+	text-align: center;
+	margin-bottom: 140px;
+}
+
+/* FOOTERLINKS NAV... Nav Container of Links to Other Pages that "Appear" when Screen is "Small" */
+.footerLinks nav
+{
+	/* Allow Div to be positioned by "footerLinks" parent's text-align */
+	display: inline-block;
+	margin: 24px;
+}
+
+/* FOOTERLINKS NAV P... ACTUAL Links to Other Pages that "Appear" when Screen is "Small" */
+.footerLinks nav p
+{
+	font-size: 16px;
+}
+
+/* FOOTERLINKS PLAYEROPTIONS... Links to Specific Media Items when Screen is "Small" */
+/* NOTE: Links are "empty" but anchor tags are used to maintain styling and is */
+/* ... controlled by JavaScript Functions */
+/* ...fl suffix = footerlinks */
+#playerOption1fl, #playerOption2fl, #playerOption3fl
+{
+	right: 53.2px;
+}
+
+/* FOOTERLINKS PLAYEROPTIONS... Title of Specific Media Items when Screen is "Small" */
+/* NOTE: Used by JavaScript Functions */
+/* ...fl suffix = footerlinks */
+#optionTitle1fl, #optionTitle2fl, #optionTitle3fl
+{
+	display: inline-block;
+	font-style: italic; 
+	color: #000;
+}
+
+/* -------------- */
+/* "WRITING" PAGE */
+/* -------------- */
+
+/* HARDTEXTFILE... Fits the .txt file into a DIV that is smaller than the Media Player */
+/* Prevents overflowing the ACTUAL Media Player and fits scroll INSIDE */
+.hardTextFile
+{
+	width: 462px;
+	margin-top: 5px;
+	/* Remove Default TXT Border... Use "Smaller" iframe within a black DIV, for a black "border" */
+	border: none;
+	height: 256px;
+	color: #FFFFFF;
+}
+
+/* ------------ */
+/* "MUSIC" PAGE */
+/* ------------ */
+
+/* Reset bottom position due to INLINE styling interactions */
+.musicStyle .rightBox
+{
+	bottom: 0px;
+}
+
+/* -------------- */
+/* "PICTURE" PAGE */
+/* -------------- */
+
+/* NO SPECIAL STYLING */
+
+/* ------------ */
+/* "VIDEO" PAGE */
+/* ------------ */
+
+/* NO SPECIAL STYLING */
+
+/* =============================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 996px)
+{
+	/* FOOTERLINKS... Hide if the screen is "big" */
+	.footerLinks
+	{
+		display: none;
+		width: 0em;
+		height: 0em;
+		visibility: hidden;
+	}
+}
+
+/* Tablet Portrait size to Base 996px */
+@media only screen and (min-width: 768px) and (max-width: 995px)
+{
+	/* REALIGN MAIN TO BE CENTER WHEN SCREEN SIZE CHANGES */
+	main
+	{
+		position: relative;
+		right: 57px;
+	}
+	
+	/* REALIGN H1 TO BE CENTER WHEN SCREEN SIZE CHANGES */
+	h1
+	{
+		position: relative;
+		left: 57px;
+	}
+	
+	/* FOOTERLINKS... Hide if the screen is "big" */
+	.footerLinks
+	{
+		display: none;
+		width: 0em;
+		height: 0em;
+		visibility: hidden;
+	}
+	
+	/* REALIGN H1 TO BE CENTER WHEN SCREEN SIZE CHANGES */
+	.rightBox
+	{
+		position: relative;
+		left: 109px;
+	}
+}
+
+/* All Mobile Sizes */
+@media only screen and (max-width: 767px) 
+{
+	/* RIGHTBOX... HIDE... No Fancy Styling Needed If Screen is "Small" */
+	.rightBox
+	{
+		display: none;
+		height: 0em;
+		width: 0em;
+		visibility: hidden;
+	}
+}
+
+/* Mobile Landscape Size to Tablet Portrait */
+@media only screen and (min-width: 480px) and (max-width: 767px) 
+{
+	/* COLORBOX... HIDE... No Fancy Styling Needed If Screen is "Small" */
+	.colorBox
+	{
+		display: none;
+		height: 0em;
+		width: 0em;
+		visibility: hidden;
+	}
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size */
+@media only screen and (max-width: 479px)
+{
+	/* COLORBOX... HIDE... No Fancy Styling Needed If Screen is "Small" */
+	.colorBox
+	{
+		display: none;
+		height: 0em;
+		width: 0em;
+		visibility: hidden;
+	}
+}
+
+
+/* =============================================================================
+   Font-Face
+   ========================================================================== */
+/* This is the proper syntax for an @font-face file
+
+/* @font-face {
+font-family: 'FontName';
+src: url('../fonts/FontName.eot');
+src: url('../fonts/FontName.eot?iefix') format('embedded-opentype'),
+url('../fonts/FontName.woff') format('woff'),
+url('../fonts/FontName.ttf') format('truetype'),
+url('../fonts/FontName.svg#FontName') format('svg');
+font-weight: normal;
+font-style: normal; }
