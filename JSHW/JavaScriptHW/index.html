@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Movie Ratings</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<h1>Enter Movie Information (Title Required)</h1>
+<form>
+    <label for="title">Title: </label>
+    <input type="text" name="title" id="title" required>
+
+    <br>
+
+    <p>Optional Info: </p>
+
+    <label for="yr">Year: </label>
+    <input type="text" name="yr" id="yr">
+
+    <br>
+
+    <label>
+        <input type="checkbox" name="checkBoxPlot" id="checkBoxPlot" value="fullPlot">Include Plot
+    </label>
+
+    <br>
+
+    <button type="button" class="btn" id="sendBtn">Search Ratings</button>
+</form>
+
+<div class="output" id="movieOutput">
+    <h2>Movie Title: </h2>
+    <p id="titleText"></p>
+
+    <h2>Movie Ratings: </h2>
+    <p id="ratingsText"></p>
+    
+    <div id="plotDiv">
+        <h2>Plot: </h2>
+        <p id="plotText"></p>
+    </div>
+</div>
+
+</body>
+
+<script src="js/script.js"></script>
+<script src="js/moviejson.js"></script>
+
+</body>
+</html>
