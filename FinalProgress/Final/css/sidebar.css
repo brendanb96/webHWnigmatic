@@ -1,0 +1,75 @@
+/*
+Styled by Brendan Boursiquot
+*/
+
+/*
+  SIDEBAR STYLING SHEET
+*/
+
+.sideBar
+{
+  width: 7.5vw;
+  height: 100%;
+  
+  background-color: rgb( 50, 50, 50 );
+
+  position: fixed;
+
+  text-align: center;
+
+  top: 0%;
+}
+
+.sideBar ul
+{
+  width: 5.75vw;
+
+  padding: 5%;
+
+  font-size: 1.5vw;
+
+  /*margin: 0 auto;*/
+
+  position: absolute;
+  top: 20%;
+  left: 10%;
+
+  /*background-color: rgb( 150, 40, 80 );*/
+  background-color: rgb( 255, 183, 173 );
+
+  list-style-type: none;
+}
+
+.sideBar ul li
+{
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+
+.dropDownLink
+{
+  display: inline;
+  position: relative;
+  /*height: fixed;
+  width: fixed;*/
+}
+
+.dropDownLink ul
+{
+  display: inline-block;
+  background-color: rgba( 255, 183, 173, 10 );
+  width: 35vw;
+
+  position: relative;
+  /*left: 5vw;
+  bottom: 5vh;*/
+}
+
+.dropDownLink ul li
+{
+  background-color: rgb( 255, 183, 173 );
+
+  position: relative;
+
+  right: 15vw;
+}
